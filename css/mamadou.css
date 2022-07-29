@@ -1,0 +1,732 @@
+/*bc size cover*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family:'novecento_normalregular';
+}
+@font-face {
+    font-family: 'novecento_boldbold';
+    src: url('font/novecento_bold-webfont.woff2') format('woff2'),
+         url('font/novecento_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novecento_demiboldbold';
+    src: url('font/novecento_demibold-webfont.woff2') format('woff2'),
+         url('font/novecento_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novecento_mediumregular';
+    src: url('font/novecento_medium-webfont.woff2') format('woff2'),
+         url('font/novecento_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novecento_normalregular';
+    src: url('font/novecento_normal-webfont.woff2') format('woff2'),
+         url('font/novecento_normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}      
+body{
+    background-color: #121113;
+}
+.menu{
+    height: 100vh;
+	width: 60%;
+	position: fixed;
+    background-color: #CB8947;
+	top: 0;
+    left: 100%;
+	z-index: 5;
+	transform: translateX(0%);
+	transition: transform .8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+}
+.menu a{
+    font-size: 18px;
+    padding: 1.5rem 0;
+    font-family: 'novecento_mediumregular';
+}
+.menu-reseaux{
+    padding-top: 10px;
+}
+.menu-reseaux img{
+width: 40px;
+padding: 5px;
+}
+.close{
+    position:absolute;
+    right: 25px;
+    top: 25px;
+}
+.close img{
+    width: 30px;
+}
+.menu-fond{
+    height: 100vh;
+	width: 100%;
+	position: fixed;
+    background-color:black;
+    opacity: 0;
+	top: 0;
+    left: 0;
+	z-index:-1;
+}
+.menu-fondActive{
+    z-index:3;
+}
+.menuActive{
+    transform: translateX(-100%);
+}
+.logo-menu{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 20px 0;
+}
+.home{
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position:  center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.navlinks-desk{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    padding:25px 0;
+    justify-content: center;
+    left: 0;
+    z-index: 10;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin: 0 20PX;
+}
+header nav a{
+    font-family: 'novecento_demiboldbold';
+    display: none;
+    margin: 0 25px;
+    font-size: 22px;
+   }
+.brg{
+    cursor: pointer;
+    width: 50px;
+    position: absolute;
+    z-index:4;
+    left: calc(100% - 75px);
+}
+h1{
+    padding:20px 0 5px 0;
+    font-family: 'novecento_boldbold';
+    font-size: 50px;
+}
+
+.produits{
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+    font-family: "novecento_boldbold";
+    text-align: center;
+}
+h2{
+    font-size: 18px;
+    padding: 30px 0 20px ;
+}
+.produit{
+width: 100%;
+cursor: initial;
+}
+
+.produit img{
+    width: 80%;
+}
+.produit p{
+    font-family:'novecento_demiboldbold';
+    padding: 5px 0px 15px;
+}
+.btn{
+    background-color: #CB8947;
+    padding: 12px 44px;
+    border-radius:10px;
+    font-size:14px;
+    transition: background-color .5s, color .5s ;
+    display: inline-block;
+}
+.btn:hover{
+    background-color:#c48546;
+   
+}
+.btn2:hover{
+    background-color:white;
+    color: black;
+}
+.btn2{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 12px 44px;
+    border-radius:10px;
+    font-size:14px;
+    margin:20px 0 ;
+    transition: background-color .5s, color .5s ;
+    display: inline-block;
+}
+.last{
+    margin-bottom: 15px;
+}
+.last2{
+    margin-bottom: 30px;
+}
+.ouverture{
+    width: 85%;
+    min-width: 300px;
+    min-height: 200px;
+    height: 300px; 
+    max-height: 350px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 40px 0 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/cane.png);
+    background-repeat: no-repeat;
+    background-position:  center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.ouverture img{
+    width: 100%;
+}
+.ouverture h2{
+font-size: 16px;
+position:absolute;
+font-family: "novecento_boldbold" ;
+}
+.a-propos{
+    background-color:#C88746;
+    width: 85%;
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.a-propos-content{
+    padding: 10px 15px 30px;
+}
+.a-propos h3{
+    font-family: "novecento_boldbold";
+    font-size: 18px;
+}
+.a-propos .titre{
+    font-family: 'novecento_mediumregular';
+    padding: 10px 0; 
+}
+.a-propos p{
+    line-height:170%;
+    font-size: 14px;
+    font-family: 'novecento_mediumregular';
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+.a-propos-btn{
+    border: 2px solid white;
+    padding: 11px 40px;
+}
+.a-propos img{
+    display: none;
+}
+
+.contact{
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "novecento_boldbold";
+}
+.contact p{
+    font-family: "novecento_boldbold";
+    line-height:120%;
+    padding:1px;
+}
+.contact-btn .btn{
+    margin: 10px 0;
+}
+footer{
+    margin: 100px auto 0;
+    background-color:#212121;
+    padding: 20px 30px 50px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    padding:2px 0;
+   
+}
+.info p{
+    font-family: 'novecento_mediumregular';
+}
+.info img{
+    margin: 10px;
+    width: 30px;
+}
+h4{
+    font-size:14px;
+}
+.text p{
+    font-size: 12px
+}
+.reseaux{
+    padding: 10px 0;
+    text-align: center;
+}
+.reseaux img{
+    width:30px;
+    margin:10px;
+}
+h5{
+    text-align: center;
+    font-family: 'novecento_boldbold';
+    font-size: 32px;
+}
+.horraire{
+    padding: 10px;
+    font-family: 'novecento_demiboldbold';
+    font-size: 14px;
+}
+.ml{
+    padding: 10px;
+    font-family: 'novecento_mediumregular';
+    font-size: 14px;
+}
+#produits h1 , #a-propos h1{
+    padding: 140px 0 30px 0;
+    text-align: center;
+    font-size: 28px;
+}
+.recrutement{
+    width: 85%;
+    min-width: 300px;
+    min-height: 200px;
+    height: 300px; 
+    max-height: 400px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 40px 0 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(img/fondA-propos.jpg);
+    background-repeat: no-repeat;
+    background-position:  center center;
+    background-size: cover;
+}
+.recrutement p{
+    font-family: "novecento_boldbold";
+    font-size: 18px;
+    padding: 5px 0;
+}
+.nos-produits{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "novecento_boldbold";
+    text-align: center;
+}
+.nos-produits a{
+  margin: 10px 0;
+}
+.nos-produits h2{
+padding: 20px 0;
+font-size: 22px;
+font-family: "novecento_boldbold";
+}
+.equipe{
+    width: 100%;
+    margin: 0 auto;
+    font-family: "novecento_boldbold";
+    text-align: center;
+}
+.equipe h3{
+    padding: 20px 0;
+    font-size: 20px;
+    font-family: "novecento_boldbold";
+    }
+.savoir-faire{
+    padding: 5px 0 10px 0;
+    font-size: 18px;
+}
+.photo-equipe{
+    padding: 20px 0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.equipier{
+width: 100%;
+padding: 10px 0;
+}
+.equipier img{
+    max-width: 300px;
+    width: 100%;
+}
+.desc{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.carte-img{
+    width: 85%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.section1{
+    display: flex;
+}
+.section2{
+    display: flex;
+}
+.containeur-produits{
+    margin: 0 auto;
+    width: 100%;
+}
+.left,.right{
+    width: 50%;
+    margin: 0 auto;
+
+}
+.left img,.right img{
+    width: 80%;
+}
+.carte{
+    width: 80%;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::Page produits ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+#page-produits h1{
+    text-align: center;
+    padding-top: 140px;
+    font-size: 28px;
+}
+
+.wrap-produits{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.produit-boulangerie{
+    width: 300px;
+    margin: 10px;
+}
+
+.flex-titre-produit{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  
+}
+.image-produit{
+    width: 100%;
+}
+.image-produit img{
+    width: 100%;
+}
+
+
+@media screen and (min-width:350px){
+h2{
+    font-size: 20px;
+}
+}
+@media screen and (min-width:400px){
+
+    h1{
+        padding:20px 0 5px 0;
+        font-family: 'novecento_boldbold';
+        font-size: 56px;
+    }
+    .home p{
+        font-size: 18px;
+    }
+	h2{
+        font-size: 22px;
+    }
+    .produit p{
+        font-size: 18px;
+    }
+    .ouverture h2{
+        font-size: 18px;
+        }
+    .a-propos h3{
+        padding:10px 0 5px 0;
+        font-size: 20px;
+        }
+    .a-propos .titre{
+        padding: 10px 0; 
+        font-size: 18px;
+        }
+    .a-propos p{
+        font-size: 16px;
+        padding:10px 0 15px 0;
+        }
+    .contact p{
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:500px){
+    h1{
+        padding:25px 0 5px 0;
+        font-family: 'novecento_boldbold';
+        font-size: 56px;
+    }
+	h2{
+        font-size: 28px;
+    }
+    .produit p{
+        font-size: 20px;
+    }
+    .ouverture h2{
+        font-size: 20px;
+        }
+    .a-propos h3{
+        padding:15px 0 10px 0;
+        font-size: 22px;
+        }
+    .a-propos .titre{
+        padding: 15px 0; 
+        font-size: 20px;
+        }
+    .a-propos p{
+        font-size: 18px;
+        padding:15px 0 20px 0;
+        }
+    .contact p{
+        font-size: 18px;
+    }
+    .nos-produits p{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:600px){
+    .equipier{
+        width: 100%;
+        padding: 10px;
+        }
+    .div{
+        display: flex;
+    }
+    .equipier img{
+        max-width: 350px;
+        width: 100%;
+    }
+
+    h1{
+        padding:25px 0 5px 0;
+        font-family: 'novecento_boldbold';
+        font-size: 56px;
+    }
+    .btn2{
+        margin:25px 0 ;
+    }
+	h2{
+        font-size: 30px;
+    }
+    .produit p{
+        font-size: 22px;
+    }
+    .ouverture h2{
+        font-size: 22px;
+        }
+    .a-propos h3{
+        padding:15px 0 10px 0;
+        font-size: 24px;
+        }
+    .a-propos .titre{
+        padding: 15px 0; 
+        font-size: 22px;
+        }
+    .a-propos p{
+        font-size: 20px;
+        padding:15px 0 20px 0;
+        }
+    .contact p{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:700px){
+    .nos-produits p{
+        font-size: 24px;
+    }
+    h1{
+        padding:30px 0 5px 0;
+        font-family: 'novecento_boldbold';
+        font-size: 58px;
+    }
+	h2{
+        font-size: 32px;
+    }
+    .produit p{
+        font-size: 24px;
+    }
+    .ouverture h2{
+        font-size: 24px;
+        }
+    .a-propos h3{
+        padding:20px 0 15px 0;
+        font-size: 26px;
+        }
+    .a-propos .titre{
+        padding: 15px 0; 
+        font-size: 24px;
+        }
+    .a-propos p{
+        font-size: 20px;
+        padding:15px 0 20px 0;
+        }
+    .contact p{
+        font-size: 25px;
+    }
+}
+@media screen and (min-width:800px){
+    .footer-flex{
+        display: flex;
+    }
+    h1{
+        padding:40px 0 10px 0;
+        font-family: 'novecento_boldbold';
+        font-size: 65px;
+    }
+    .btn2{
+        margin:30px 0 ;
+    }
+	h2{
+        font-size: 32px;
+    }
+    .produit p{
+        font-size: 24px;
+    }
+    .ouverture h2{
+        font-size: 26px;
+        }
+    .a-propos h3{
+        padding:20px 0 15px 0;
+        font-size: 28px;
+        }
+    .a-propos .titre{
+        padding: 15px 0; 
+        font-size: 26px;
+        }
+    .a-propos p{
+        font-size: 22px;
+        max-width: 500px;
+        padding:15px 0 10px 0;
+        }
+    .contact p{
+        font-size: 25px;
+    }
+}
+@media screen and (min-width:900px){
+
+    .nos-produits p{
+        font-size: 26px;
+    }
+    .photo-equipe{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .brg{
+        display: none;
+    }
+    h1{
+        padding:40px 0 15px 0;
+        font-family: 'novecento_boldbold';
+        font-size: 70px;
+    }
+    header nav a{
+        display: block;
+    }
+	.produits{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        max-width: unset;
+    }
+    h2{
+        text-align: center;
+    }
+    .produits .containeur{
+        display: flex;
+    }
+    .produit{
+        width: calc(100% / 3) - 100px;
+        padding: 15px
+    }
+    .produit img{
+        width: 100%;
+    }
+    .a-propos{
+        display: flex;
+    }
+    .a-propos-content{
+        width: 50%;
+    }
+    .a-propos-img{
+        background: url(img/a-propos.png);
+        background-repeat: no-repeat;
+        background-position:  center center;
+        width: 50%;
+    }
+}
